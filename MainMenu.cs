@@ -38,7 +38,7 @@ namespace PJS.Bootstrap {
                     }
                 }
                 else {
-                    builder.Add(T("Sign In"), itemCount.ToString(), item => item.Action("LogOn", "Account", new { area = "Orchard.Users", ReturnUrl = (_orchardServices.WorkContext.HttpContext.Request.QueryString["ReturnUrl"] ?? _orchardServices.WorkContext.HttpContext.Request.RawUrl) }));
+                    builder.Add(T("Sign In"), itemCount.ToString(), item => item.Action("LogOn", "Account", new { area = "Orchard.Users", ReturnUrl = (_orchardServices.WorkContext.HttpContext.Request.QueryString["ReturnUrl"] ?? _orchardServices.WorkContext.HttpContext.Request.RawUrl) }).AddClass("menuSignIn"));
                 }
             }
         }
